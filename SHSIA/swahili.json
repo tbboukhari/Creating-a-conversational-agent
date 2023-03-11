@@ -1,0 +1,492 @@
+{
+    "vars":[
+        {"name":"etat","val":"debut"},
+        {"name":"prochain_mot","val":1},
+        {"name":"tirage","val":0},
+        {"name":"humeur","val":"ignore"},
+        {"name":"raison","val":"ignore"},
+        {"name":"correct","val":true},
+        {"name":"sympa","val":true},
+        {"name":"time","val":"ignore"},
+        {"name":"desire","val":"0.7"},
+        {"name":"cause","val":"ignore"},
+        {"name":"appri","val":0},
+        {"name":"faute","val":0}
+    ],
+    "questions":[
+        {
+            "conditions": [ {"name":"humeur","val":"inconnue"} ],
+            "phrase": "Attendez, j'ai une question importante à vous poser. Comment vous sentez-vous ?",
+            "responses": [
+                {
+                    "phrase": ":-)",
+                    "vars": [ {"name":"humeur","val":"positive"} ]
+                },
+                {
+                    "phrase": ":-/",
+                    "vars": [ {"name":"humeur","val":"moyenne"} ]
+                },
+                {
+                    "phrase": ":-(",
+                    "vars": [ {"name":"humeur","val":"negative"} ]
+                }
+            ]
+        },
+        {
+            "conditions": [ {"name":"raison","val":"inconnue"} ],
+            "phrase": "Est-ce que c'est lié à l'activité que nous faisons ensemble ?",
+            "responses": [
+                {
+                    "phrase": "Oui",
+                    "vars": [ {"name":"raison","val":"activite"} ]
+                },
+                {
+                    "phrase": "Non",
+                    "vars": [ {"name":"raison","val":"autre"} ]
+                
+                }
+            ]
+        },
+        {
+            "conditions": [ {"name":"etat","val":"debut"} ],
+            "phrase": "Que voulez-vous faire ?",
+            "responses": [
+                {
+                    "phrase": "Je veux apprendre un nouveau mot",
+                    "vars": [ {"name":"etat","val":"apprendre"} ]
+                },
+                {
+                    "phrase": "Interroge-moi sur un mot!",
+                    "vars": [ {"name":"etat","val":"reciter"} ]
+                },
+                {
+                    "phrase": "J'en ai assez, on arrete",
+                    "vars": [ {"name":"etat","val":"arrete"} ]
+                }
+            ]
+        },
+        {
+            "conditions": [ {"name":"etat","val":"arrete"},
+                            {"name":"sympa","val":true} ],
+            "phrase": "Voulez-vous vraiment arrêter? vous pouvez rester pour apprendre des nouveaux mots!",
+            "responses": [
+                {
+                    "phrase": "Oui",
+                    "vars": [ {"name":"etat","val":"fin"} ]
+                },
+                {
+                    "phrase": "Non",
+                    "vars": [ {"name":"etat","val":"debut"} ]
+                }
+            ]
+        },
+        {
+            "conditions": [ {"name":"etat","val":"arrete"},
+                            {"name":"sympa","val":false} ],
+            "phrase": "Vous pouvez partir vous etes nul !",
+            "responses": [
+                {
+                    "phrase": "Oui",
+                    "vars": [ {"name":"etat","val":"fin"} ]
+                },
+                {
+                    "phrase": "Non",
+                    "vars": [ {"name":"etat","val":"debut"} ]
+                }
+            ]
+        },
+        {
+            "conditions": [ {"name":"etat","val":"apprendre"},
+                            {"name":"prochain_mot","val":1} ],
+            "phrase": "\"Bonjour\" se dit \"jambo\"",
+            "responses": [
+                {
+                    "phrase": "Ok",
+                    "vars": [ {"name":"etat","val":"appri"} ]
+                }
+            ]
+        },
+        {
+            "conditions": [ {"name":"etat","val":"apprendre"},
+                            {"name":"prochain_mot","val":2} ],
+            "phrase": "\"Merci\" se dit \"asante\"",
+            "responses": [
+                {
+                    "phrase": "Ok",
+                    "vars": [ {"name":"etat","val":"appri"} ]
+                }
+            ]
+        },
+        {
+            "conditions": [ {"name":"etat","val":"apprendre"},
+                            {"name":"prochain_mot","val":3} ],
+            "phrase": "\"Excusez-moi\" se dit \"samahani\"",
+            "responses": [
+                {
+                    "phrase": "Ok",
+                    "vars": [ {"name":"etat","val":"appri"} ]
+                }
+            ]
+        },
+        {
+            "conditions": [ {"name":"etat","val":"apprendre"},
+                            {"name":"prochain_mot","val":4} ],
+            "phrase": "\"Je ne comprends pas\" se dit \"sielewi\"",
+            "responses": [
+                {
+                    "phrase": "Ok",
+                    "vars": [ {"name":"etat","val":"appri"} ]
+                }
+            ]
+        },
+        {
+            "conditions": [ {"name":"etat","val":"apprendre"},
+                            {"name":"prochain_mot","val":5} ],
+            "phrase": "\"Parlez-vous francais\" se dit \"unasema faransa\"",
+            "responses": [
+                {
+                    "phrase": "Ok",
+                    "vars": [ {"name":"etat","val":"appri"} ]
+                }
+            ]
+        },
+        {
+            "conditions": [ {"name":"etat","val":"apprendre"},
+                            {"name":"prochain_mot","val":6} ],
+            "phrase": "\"Oui\" se dit \"ndiyo\"",
+            "responses": [
+                {
+                    "phrase": "Ok",
+                    "vars": [ {"name":"etat","val":"appri"} ]
+                }
+            ]
+        },
+        {
+            "conditions": [ {"name":"etat","val":"apprendre"},
+                            {"name":"prochain_mot","val":7} ],
+            "phrase": "\"Non\" se dit \"hapana\"",
+            "responses": [
+                {
+                    "phrase": "Ok",
+                    "vars": [ {"name":"etat","val":"appri"} ]
+                }
+            ]
+        },
+        {
+            "conditions": [ {"name":"etat","val":"apprendre"},
+                            {"name":"prochain_mot","val":8} ],
+            "phrase": "Désolé, je n'ai plus rien à vous apprendre.",
+            "responses": [
+                {
+                    "phrase": "Ok",
+                    "vars": [ {"name":"etat","val":"debut"} ]
+                }
+            ]
+        },
+        {
+            "conditions": [ {"name":"etat","val":"reciter"},
+                            {"name":"tirage","val":1} ],
+            "phrase": "Comment dit-on \"bonjour\" ?",             
+            "responses": [
+                {
+                    "phrase": "jambo",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":true} ]
+                },
+                {
+                    "phrase": "asante",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                },
+                {
+                    "phrase": "samahani",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                },
+                {
+                    "phrase": "sielewi",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                },
+                {
+                    "phrase": "unasema faransa",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                },
+                {
+                    "phrase": "ndiyo",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                },
+                {
+                    "phrase": "hapana",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                }
+            ]
+        },
+        {
+            "conditions": [ {"name":"etat","val":"reciter"},
+                            {"name":"tirage","val":2} ],
+            "phrase": "Comment dit-on \"merci\" ?",             
+            "responses": [
+                {
+                    "phrase": "jambo",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                },
+                {
+                    "phrase": "asante",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":true} ]
+                },
+                {
+                    "phrase": "samahani",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                },
+                {
+                    "phrase": "sielewi",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                },
+                {
+                    "phrase": "unasema faransa",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                },
+                {
+                    "phrase": "ndiyo",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                },
+                {
+                    "phrase": "hapana",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                }
+            ]
+        },
+        {
+            "conditions": [ {"name":"etat","val":"reciter"},
+                            {"name":"tirage","val":3} ],
+            "phrase": "Comment dit-on \"excusez-moi\" ?",             
+            "responses": [
+                {
+                    "phrase": "jambo",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                },
+                {
+                    "phrase": "asante",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                },
+                {
+                    "phrase": "samahani",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":true} ]
+                },
+                {
+                    "phrase": "sielewi",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                },
+                {
+                    "phrase": "unasema faransa",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                },
+                {
+                    "phrase": "ndiyo",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                },
+                {
+                    "phrase": "hapana",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                }
+            ]
+        },
+        {
+            "conditions": [ {"name":"etat","val":"reciter"},
+                            {"name":"tirage","val":4} ],
+            "phrase": "Comment dit-on \"je ne comprends pas\" ?",             
+            "responses": [
+                {
+                    "phrase": "jambo",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                },
+                {
+                    "phrase": "asante",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                },
+                {
+                    "phrase": "samahani",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                },
+                {
+                    "phrase": "sielewi",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":true} ]
+                },
+                {
+                    "phrase": "unasema faransa",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                },
+                {
+                    "phrase": "ndiyo",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                },
+                {
+                    "phrase": "hapana",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                }
+            ]
+        },
+        {
+            "conditions": [ {"name":"etat","val":"reciter"},
+                            {"name":"tirage","val":5} ],
+            "phrase": "Comment dit-on \"parlez-vous francais\" ?",             
+            "responses": [
+                {
+                    "phrase": "jambo",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                },
+                {
+                    "phrase": "asante",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                },
+                {
+                    "phrase": "samahani",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                },
+                {
+                    "phrase": "sielewi",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                },
+                {
+                    "phrase": "unasema faransa",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":true} ]
+                },
+                {
+                    "phrase": "ndiyo",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                },
+                {
+                    "phrase": "hapana",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                }
+            ]
+        },
+        {
+            "conditions": [ {"name":"etat","val":"reciter"},
+                            {"name":"tirage","val":6} ],
+            "phrase": "Comment dit-on \"oui\" ?",             
+            "responses": [
+                {
+                    "phrase": "jambo",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                },
+                {
+                    "phrase": "asante",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                },
+                {
+                    "phrase": "samahani",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                },
+                {
+                    "phrase": "sielewi",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                },
+                {
+                    "phrase": "unasema faransa",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                },
+                {
+                    "phrase": "ndiyo",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":true} ]
+                },
+                {
+                    "phrase": "hapana",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                }
+            ]
+        },
+        {
+            "conditions": [ {"name":"etat","val":"reciter"},
+                            {"name":"tirage","val":7} ],
+            "phrase": "Comment dit-on \"non\" ?",             
+            "responses": [
+                {
+                    "phrase": "jambo",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                },
+                {
+                    "phrase": "asante",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                },
+                {
+                    "phrase": "samahani",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                },
+                {
+                    "phrase": "sielewi",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                },
+                {
+                    "phrase": "unasema faransa",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                },
+                {
+                    "phrase": "ndiyo",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":false} ]
+                },
+                {
+                    "phrase": "hapana",
+                    "vars": [ {"name":"etat","val":"feedback"}, {"name":"correct","val":true} ]
+                }
+            ]
+        },
+
+
+        {
+            "conditions": [ {"name":"etat","val":"feedback"},
+                            {"name":"correct","val":true}, 
+                            {"name":"sympa","val":true}],
+            "phrase": "Bravo, c'est génial!",
+            "responses": [
+                {
+                    "phrase": "Ok",
+                    "vars": [ {"name":"etat","val":"debut"} ]
+                }
+            ]
+        },
+        {
+            "conditions": [ {"name":"etat","val":"feedback"},
+                            {"name":"correct","val":true}, 
+                            {"name":"sympa","val":false} ],
+            "phrase": "Vous avez de la chance on vera la prochaine fois!",
+            "responses": [
+                {
+                    "phrase": "Ok",
+                    "vars": [ {"name":"etat","val":"debut"} ]
+                }
+            ]
+        },
+
+
+
+
+
+
+        {
+            "conditions": [ {"name":"etat","val":"feedback"},
+                            {"name":"correct","val":false}, 
+                            {"name":"sympa","val":true} ],
+            "phrase": "Non, ce n'est pas ça ! mais vous pouvez toujours réussir",
+            "responses": [
+                {
+                    "phrase": "Ok",
+                    "vars": [ {"name":"etat","val":"debut"} ]
+                }
+            ]
+        },
+        {
+            "conditions": [ {"name":"etat","val":"feedback"},
+                            {"name":"correct","val":false}, 
+                            {"name":"sympa","val":false} ],
+            "phrase": "vous etes nuuul! ",
+            "responses": [
+                {
+                    "phrase": "Ok",
+                    "vars": [ {"name":"etat","val":"debut"} ]
+                }
+            ]
+        }
+
+
+
+
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "vars":[{"name":"etat","val":"debut"}],
+    "questions":[
+        {
+            "conditions": [ {"name":"etat","val":"debut"} ],
+            "phrase": "Que voulez-vous faire ?",
+            "responses": [
+                {
+                    "phrase": "Apprendre un nouveau mot",
+                    "vars": [ {"name":"etat","val":"apprendre"} ]
+                },
+                {
+                    "phrase": "Apprendre les synonymes d'un mot",
+                    "vars": [ {"name":"etat","val":"apprendre"} ]
+                },
+                {
+                    "phrase": "Etre interroge sur un mot",
+                    "vars": [ {"name":"etat","val":"reciter"} ]
+                },
+                {
+                    "phrase": "Arreter",
+                    "vars": [ {"name":"etat","val":"fin"} ]
+                }
+            ]
+        }
+    ]
+}

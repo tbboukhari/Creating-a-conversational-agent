@@ -1,0 +1,16 @@
+C:\Users\salah\Desktop\IA\SHSIA\obj\Debug\net5.0\SHSIA.csproj.AssemblyReference.cache
+C:\Users\salah\Desktop\IA\SHSIA\obj\Debug\net5.0\SHSIA.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\salah\Desktop\IA\SHSIA\obj\Debug\net5.0\SHSIA.AssemblyInfoInputs.cache
+C:\Users\salah\Desktop\IA\SHSIA\obj\Debug\net5.0\SHSIA.AssemblyInfo.cs
+C:\Users\salah\Desktop\IA\SHSIA\obj\Debug\net5.0\SHSIA.csproj.CoreCompileInputs.cache
+C:\Users\salah\Desktop\IA\SHSIA\bin\Debug\net5.0\SHSIA.exe
+C:\Users\salah\Desktop\IA\SHSIA\bin\Debug\net5.0\SHSIA.deps.json
+C:\Users\salah\Desktop\IA\SHSIA\bin\Debug\net5.0\SHSIA.runtimeconfig.json
+C:\Users\salah\Desktop\IA\SHSIA\bin\Debug\net5.0\SHSIA.runtimeconfig.dev.json
+C:\Users\salah\Desktop\IA\SHSIA\bin\Debug\net5.0\SHSIA.dll
+C:\Users\salah\Desktop\IA\SHSIA\bin\Debug\net5.0\ref\SHSIA.dll
+C:\Users\salah\Desktop\IA\SHSIA\bin\Debug\net5.0\SHSIA.pdb
+C:\Users\salah\Desktop\IA\SHSIA\obj\Debug\net5.0\SHSIA.dll
+C:\Users\salah\Desktop\IA\SHSIA\obj\Debug\net5.0\ref\SHSIA.dll
+C:\Users\salah\Desktop\IA\SHSIA\obj\Debug\net5.0\SHSIA.pdb
+C:\Users\salah\Desktop\IA\SHSIA\obj\Debug\net5.0\SHSIA.genruntimeconfig.cache

@@ -1,0 +1,5 @@
+C:\Users\salah\Desktop\IA\SHSIA\obj\Debug\netcoreapp5.0\SHSIA.csproj.AssemblyReference.cache
+C:\Users\salah\Desktop\IA\SHSIA\obj\Debug\netcoreapp5.0\SHSIA.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\salah\Desktop\IA\SHSIA\obj\Debug\netcoreapp5.0\SHSIA.AssemblyInfoInputs.cache
+C:\Users\salah\Desktop\IA\SHSIA\obj\Debug\netcoreapp5.0\SHSIA.AssemblyInfo.cs
+C:\Users\salah\Desktop\IA\SHSIA\obj\Debug\netcoreapp5.0\SHSIA.csproj.CoreCompileInputs.cache
